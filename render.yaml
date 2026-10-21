@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: kior-ws
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SESSION_SECRET
+        sync: false
+      - key: PORT
+        value: 10000
